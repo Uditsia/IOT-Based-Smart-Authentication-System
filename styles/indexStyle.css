@@ -1,3 +1,67 @@
-p{
-    color: red;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+nav{
+    background-color: #eeeeee;
+    box-shadow: 0 2px 9px gray, 0 3px 20px darkgrey;
+    /* height:40px; */
+    padding: 15px;
+   
+}
+nav p{
+    margin:0;
+    text-align: left;
+    font-weight: bold;
+}
+
+section{
+    margin-top:20px;
+}
+.authMain{
+    margin: 10% auto auto auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#s1,#s2{
+    margin-top: 10px;
+}
+.hr1,.hr2{
+    margin-bottom: 40px;
+    border-color: #6200ea;
+    width:60%;
+    transition: all 0.6s;
+}
+.authMain:hover .hr1 {
+    width: 70%;
+  }
+  .authMain:hover .hr2 {
+    width: 70%;
+  }  
+
+.authSub1{
+    position: absolute;
+    left: 30%;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
+    width: 30vw;
+    transition: left 10s, opacity 1s;
+    opacity: 1;
+}
+.authSub2{
+    position: absolute;
+    left: 950px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
+    width: 30vw;
+    transition: left 4s, opacity 1s;
+    opacity: 0;
+}
+.back{
+    position: absolute;
+    left: 0;
 }
