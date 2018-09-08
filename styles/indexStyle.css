@@ -32,9 +32,10 @@ section{
 }
 .hr1,.hr2{
     margin-bottom: 40px;
-    border-bottom-color: #6200ea;
     width:60%;
     transition: all 0.6s;
+    border:2px solid #6200ea;
+    border-radius: 25%;
 }
 .authMain:hover .hr1 {
     width: 70%;
@@ -46,7 +47,7 @@ section{
 
 .authSub1{
     left: 30%;
-    transition: left 10s, opacity 1s,border 0.6s;
+    transition: left 3s, opacity 1s,border 0.6s;
     opacity: 1;
 }
 .signInBox{
@@ -73,11 +74,27 @@ section{
     position: absolute;
     left: 0;
 }
-.signInBox .pImg{
-    border-radius: 50%;
+.authSub2 h2{
+    margin-top: 0;
+}
+label{
+    font-size: 1.3em;
+}
+input{
+    height: 30px;
     width: 200px;
-    height: 200px;
-    background:url("..\resorces\Imgs\index-page\profilePic.png");
-    overflow: hidden;
+    font-size: 1.3em;
+}
+.signInBox a{
+    font-size: 0.8em;
+    color: rgb(0, 110, 255);
+    float: right;
+    margin:2% 22% 0 0;
+}
+button{
+    background-color: white;
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;   
 }
 }
