@@ -1,13 +1,15 @@
+@media screen and (min-width:700px){
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    overflow: hidden;
 }
 nav{
     background-color: #eeeeee;
     box-shadow: 0 2px 9px gray, 0 3px 20px darkgrey;
     /* height:40px; */
     padding: 15px;
-   
+   width:100vw;
 }
 nav p{
     margin:0;
@@ -30,7 +32,7 @@ section{
 }
 .hr1,.hr2{
     margin-bottom: 40px;
-    border-color: #6200ea;
+    border-bottom-color: #6200ea;
     width:60%;
     transition: all 0.6s;
 }
@@ -39,29 +41,43 @@ section{
   }
   .authMain:hover .hr2 {
     width: 70%;
-  }  
+  }
+    
 
 .authSub1{
-    position: absolute;
     left: 30%;
-    text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
-    width: 30vw;
-    transition: left 10s, opacity 1s;
+    transition: left 10s, opacity 1s,border 0.6s;
     opacity: 1;
 }
-.authSub2{
+.signInBox{
     position: absolute;
-    left: 950px;
     text-align: center;
     padding: 30px;
     box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
     width: 30vw;
-    transition: left 4s, opacity 1s;
+    border-right: 5px solid grey ;
+    border-left: 5px solid grey ; 
+    border-radius: 5px;
+}
+.signInBox:hover{
+    border-right: 5px solid #6200ea ;
+    border-left: 5px solid #6200ea ;
+}
+.authSub2{
+    left: 950px;
+    padding: 30px;
+    transition: left 4s, opacity 1s,border 0.6s;
     opacity: 0;
 }
 .back{
     position: absolute;
     left: 0;
+}
+.signInBox .pImg{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background:url("..\resorces\Imgs\index-page\profilePic.png");
+    overflow: hidden;
+}
 }
