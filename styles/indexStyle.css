@@ -1,6 +1,6 @@
 @media screen and (min-width:700px){
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     margin: 0;
     overflow: hidden;
 }
@@ -52,17 +52,16 @@ section{
     text-align: center;
     padding: 30px;
     width: 30vw;
-    border-right: 5px solid rgba(0,0,0,0.1) ;
-    border-left: 5px solid rgba(0,0,0,0.1)  ; 
+    box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
+    border-right: 5px solid #6200ea ;
+    border-left: 5px solid #6200ea ;
     border-radius: 5px;
     transform: scale(1);
     transition: scale 0.6s, box-shadow 0.6s, opacity 1s, border 0.6s, left 4s,all 0.6s;
 }
 .signInBox:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
-    border-right: 5px solid #6200ea ;
-    border-left: 5px solid #6200ea ;
+   
 }
 .authSub2{
     left: 950px;
@@ -91,6 +90,7 @@ input{
 input:focus{
     border: 1px solid white;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7) inset;
+    outline: none;
 }
 input:hover{
     border: 1px solid white;
@@ -104,10 +104,16 @@ input:hover{
 }
 button{
     background-color: white;
-    border: 1px solid black;
-    width: 80px;
-    height: 30px;
+    width: 90px;
+    height: 40px;
     border-radius: 9999px;
     cursor: pointer;
+    background-color: #6200ea;
+    color: white;
+    font-size: 1.05em;
+    text-shadow: 1px 1px solid black;
+    border:none;
+    float: right;
+
 }
 }
