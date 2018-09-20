@@ -98,7 +98,7 @@ input:hover{
 }
 .signInBox a{
     font-size: 0.8em;
-    color: rgb(0, 110, 255);
+    color: #6200ea;
     float: right;
     margin:2% 22% 0 0;
 }
@@ -116,7 +116,5 @@ button{
     float: right;
 
 }
-a{
-    color: #6200ea;
-}
+
 }
