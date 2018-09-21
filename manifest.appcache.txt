@@ -1,0 +1,23 @@
+CACHE MANIFEST
+
+#version 1.0 9-21-2018
+
+CACHE:
+
+#images
+https://uditsia.github.io/IOT-Based-Smart-Authentication-System/resorces/Imgs/index-page/profilePic.png
+
+#internal HTML documents
+https://uditsia.github.io/IOT-Based-Smart-Authentication-System/
+
+#style sheets
+https://uditsia.github.io/IOT-Based-Smart-Authentication-System/styles/indexStyle.css
+
+#style sheet images
+
+
+#javascript files
+https://uditsia.github.io/IOT-Based-Smart-Authentication-System/scripts/indexScript.js
+
+NETWORK:
+*
