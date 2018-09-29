@@ -10,11 +10,10 @@
     border: 3px solid red;
     width: 620px;
     margin-top: 50%;
-    transform: rotate(90deg);
   }
   img {
-    width: 620px;
-    height: 440px;
+    width: 619px;
+    height: 420px;
     position: relative;
     overflow: hidden;
     margin: 0;
