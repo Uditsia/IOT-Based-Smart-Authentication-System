@@ -8,11 +8,11 @@
   }
   .liveBox {
     border: 3px solid red;
-    width: 620px;
+    width: 99vw;
     margin-top: 50%;
   }
   img {
-    width: 619px;
+    width: 99vw;
     height: 420px;
     position: relative;
     overflow: hidden;
