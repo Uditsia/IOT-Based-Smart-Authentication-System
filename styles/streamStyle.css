@@ -3,6 +3,9 @@
   body {
     margin: 0px;
   }
+  article {
+    position: absolute;
+  }
   .liveBox {
     border: 3px solid red;
     width: 620px;
