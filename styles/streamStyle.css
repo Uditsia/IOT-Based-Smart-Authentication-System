@@ -5,14 +5,13 @@
   }
   .liveBox {
     border: 3px solid red;
-    overflow: hidden;
-    max-width: 230px;
-    margin-left: 20%;
-    margin-top: 10%;
+    width: 620px;
+    margin-top: 50%;
+    transform: rotate(90deg);
   }
   img {
-    width: 230px;
-    height: 400px;
+    width: 620px;
+    height: 440px;
     position: relative;
     overflow: hidden;
     margin: 0;
