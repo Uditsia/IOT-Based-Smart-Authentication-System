@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Live Stream</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../styles/streamStyle.css" />
-    
+
 </head>
+
 <body>
     <section>
         <article>
             <div class="liveBox">
-                <div class="liveSym"><div class="redDot"></div><label>LIVE</label></div>
-                <img id="lStream" src="http://www.mujahidurrehman.com/wp-content/uploads/2017/02/table-mountain-sunset-beach-cape-town.jpg" alt="live Stream">
+                <div class="liveSym">
+                    <div class="redDot"></div><label>LIVE</label>
+                </div>
+                <a href="https://230ef00a.ngrok.io/video_feed">
+                    <img id="lStream" src="https://230ef00a.ngrok.io/video_feed" width="700px" height="460px">
+                </a>
                 <div class="timeView" id="timeView"> <label>Date: Time:</label></div>
                 <div class="streamControl" id="streamControl"></div>
             </div>
@@ -22,4 +28,5 @@
 
     <script src="../scripts/streamScript.js"></script>
 </body>
+
 </html>
