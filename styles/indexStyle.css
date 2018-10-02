@@ -1,84 +1,86 @@
-@media screen and (min-width:700px){
-body{
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+/* for web app */
+@media screen and (min-width: 700px) {
+  body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+      Helvetica, Arial, "Lucida Grande", sans-serif;
     margin: 0;
     overflow: hidden;
-}
-nav{
+  }
+  nav {
     background-color: #eeeeee;
     box-shadow: 0 2px 9px gray, 0 3px 20px darkgrey;
     /* height:40px; */
     padding: 15px;
-   width:100vw;
-}
-nav p{
-    margin:0;
+    width: 100vw;
+  }
+  nav p {
+    margin: 0;
     text-align: left;
     font-weight: bold;
-}
+  }
 
-section{
-    margin-top:20px;
-}
-.authMain{
+  section {
+    margin-top: 20px;
+  }
+  .authMain {
     margin: 10% auto auto auto;
     overflow: auto;
-    
-}
-#s1,#s2{
+  }
+  #s1,
+  #s2 {
     margin-top: 10px;
-}
-.hr1,.hr2{
+  }
+  .hr1,
+  .hr2 {
     margin-bottom: 40px;
-    width:60%;
+    width: 60%;
     transition: all 0.6s;
-    border:2px solid #6200ea;
+    border: 2px solid #6200ea;
     border-radius: 25%;
-}
-.authMain:hover .hr1 {
+  }
+  .authMain:hover .hr1 {
     width: 70%;
   }
   .authMain:hover .hr2 {
     width: 70%;
   }
-    
 
-.authSub1{
+  .authSub1 {
     left: 30%;
     opacity: 1;
-}
-.signInBox{
+  }
+  .signInBox {
     position: absolute;
     text-align: center;
     padding: 30px;
     width: 30vw;
     box-shadow: 0 0 10px darkgray, 0 0 20px lightgray;
-    border-right: 5px solid #6200ea ;
-    border-left: 5px solid #6200ea ;
+    border-right: 5px solid #6200ea;
+    border-left: 5px solid #6200ea;
     border-radius: 5px;
     transform: scale(1);
-    transition: scale 0.6s, box-shadow 0.6s, opacity 1s, border 0.6s, left 4s,all 0.6s;
-}
-.signInBox:hover{
+    transition: scale 0.6s, box-shadow 0.6s, opacity 1s, border 0.6s, left 4s,
+      all 0.6s;
+  }
+  .signInBox:hover {
     transform: scale(1.05);
-   
-}
-.authSub2{
+  }
+  .authSub2 {
     left: 950px;
     padding: 30px;
     opacity: 0;
-}
-.back{
+  }
+  .back {
     position: absolute;
     left: 0;
-}
-.authSub2 h2{
+  }
+  .authSub2 h2 {
     margin-top: 0;
-}
-label{
+  }
+  label {
     font-size: 1.3em;
-}
-input{
+  }
+  input {
     height: 30px;
     width: 200px;
     font-size: 1.3em;
@@ -86,23 +88,26 @@ input{
     transition: all 0.4s;
     border-radius: 9999px;
     padding: 10px;
-}
-input:focus{
+  }
+  input:focus {
     border: 1px solid white;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7) inset;
     outline: none;
-}
-input:hover{
+  }
+  input:hover {
     border: 1px solid white;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7) inset;
-}
-.signInBox a{
+  }
+  input:valid {
+    border: 1px solid lightgreen;
+  }
+  .signInBox a {
     font-size: 0.8em;
     color: #6200ea;
     float: right;
-    margin:2% 22% 0 0;
-}
-button{
+    margin: 2% 22% 0 0;
+  }
+  button {
     background-color: white;
     width: 90px;
     height: 40px;
@@ -112,9 +117,20 @@ button{
     color: white;
     font-size: 1.05em;
     text-shadow: 1px 1px solid black;
-    border:none;
+    border: none;
     float: right;
-
+  }
 }
-
+/* for mobile app */
+.s1 {
+  display: none;
+}
+.back {
+  display: none;
+}
+.pImg {
+  display: none;
+}
+.authSub2 h2 {
+  display: none;
 }
