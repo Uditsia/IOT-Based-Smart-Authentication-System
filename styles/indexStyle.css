@@ -84,10 +84,12 @@
     height: 30px;
     width: 200px;
     font-size: 1.3em;
-    border: 1px solid black;
+    border: 1px solid white;
     transition: all 0.4s;
     border-radius: 9999px;
     padding: 10px;
+    outline-width: 5px;
+    outline-color: white;
   }
   input:focus {
     border: 1px solid white;
@@ -101,16 +103,21 @@
   input:valid {
     border: 1px solid lightgreen;
   }
+  input::selection {
+    border: 1px solid red;
+  }
   .signInBox a {
     font-size: 0.8em;
     color: #6200ea;
-    float: right;
-    margin: 2% 22% 0 0;
+  }
+  .a1 {
+    margin: 2% 15% 0 0;
+    display: inline-block;
   }
   button {
     background-color: white;
-    width: 90px;
     height: 40px;
+    max-width: 40%;
     border-radius: 9999px;
     cursor: pointer;
     background-color: #6200ea;
@@ -119,6 +126,21 @@
     text-shadow: 1px 1px solid black;
     border: none;
     float: right;
+    transition: all 0.6s;
+  }
+  .fEmail {
+    float: right;
+  }
+  .containerEmail {
+    background-color: #6200ea;
+    border-radius: 9999px;
+    display: inline-block;
+    padding: 5px;
+    clear: both;
+    transition: all 0.6s;
+  }
+  .s1 div {
+    vertical-align: center;
   }
 }
 /* for mobile app */
