@@ -1,7 +1,8 @@
 window.onload = init();
 function init() {
-  document.querySelector("#s1").addEventListener("click", function(evt) {
-    let email = document.querySelector("#email");
+  let email = document.querySelector("#email");
+  document.querySelector("#s1").addEventListener("click", eValidity);
+  function eValidity(evt) {
     let emailCheck = email.checkValidity();
     if (emailCheck) {
       sub1Transition();
@@ -34,6 +35,12 @@ function init() {
       setTimeout(function() {
         hr.style = "width:60%;";
       }, 1000);
+    }
+  }
+  email.addEventListener("keypress", function(evt) {
+    const key = event.keyCode;
+    if (key === 13) {
+      eValidity();
     }
   });
 
