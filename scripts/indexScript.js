@@ -44,6 +44,8 @@ function init() {
     }
   });
 
+  
+
   document.querySelector("#back").addEventListener("click", function() {
     authSub1.style = "left:30%;opacity:1;";
     authSub2.style = "left:948px;opacity:0;";
