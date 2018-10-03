@@ -38,7 +38,7 @@ function init() {
     }
   }
   email.addEventListener("keypress", function(evt) {
-    const key = event.keyCode;
+    const key = evt.keyCode;
     if (key === 13) {
       eValidity();
     }
