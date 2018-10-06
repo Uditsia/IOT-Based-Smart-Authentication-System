@@ -2,6 +2,17 @@ window.onload = init();
 function init() {
   let email = document.querySelector("#email");
   document.querySelector("#s1").addEventListener("click", eValidity);
+
+  //sign in check
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      window.location = "pages/liveStream.html";
+    } else {
+      console.log("not logged in");
+    }
+  });
+
   function eValidity(evt) {
     let emailCheck = email.checkValidity();
     if (emailCheck) {
@@ -43,12 +54,40 @@ function init() {
       eValidity();
     }
   });
-
-  
-
+  let s2 = document.querySelector("#s2");
+  s2.addEventListener("click", auth);
   document.querySelector("#back").addEventListener("click", function() {
     authSub1.style = "left:30%;opacity:1;";
     authSub2.style = "left:948px;opacity:0;";
     document.querySelector("#email").focus();
   });
+
+  function auth() {
+    email = document.getElementById("email").value;
+    password = document.getElementById("pass").value;
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        document.getElementById("signinError").innerHTML = errorMessage;
+        setTimeout(clear, 5000);
+        function clear() {
+          document.getElementById("signinError").innerHTML = "";
+        }
+        // ...
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("Signed in:", user);
+        window.location = "pages/liveStream.html";
+      } else {
+        console.log("not signed in");
+      }
+    });
+  }
 }

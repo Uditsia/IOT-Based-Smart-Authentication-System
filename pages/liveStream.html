@@ -7,7 +7,19 @@
     <title>Live Stream</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../styles/streamStyle.css" />
-
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBLDNV-x3UyRbtbEj1iXk7-kMEwtRHRVh4",
+            authDomain: "tat-iot-project.firebaseapp.com",
+            databaseURL: "https://tat-iot-project.firebaseio.com",
+            projectId: "tat-iot-project",
+            storageBucket: "tat-iot-project.appspot.com",
+            messagingSenderId: "868602080623"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
@@ -18,7 +30,7 @@
                     <div class="redDot"></div><label>LIVE</label>
                 </div>
 
-                <img id="lStream" src="https://laganum.serveo.net/video_feed" width="700px" height="460px">
+                <img id="lStream" src="https://aliquot.serveo.net/video_feed" width="700px" height="460px">
 
                 <!-- <div class="timeView" id="timeView"> <label>Date: Time:</label></div> -->
                 <div class="streamControl" id="streamControl"></div>

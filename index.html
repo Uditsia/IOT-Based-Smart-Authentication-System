@@ -12,6 +12,19 @@
   <meta name="description" content="Web app for IOT based smart Authenticantion system, Trident academy of Technology,
     project" />
   <meta name="keywords" content="IoT, Inreusion detection system, camera, survelance,Authentication system" />
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBLDNV-x3UyRbtbEj1iXk7-kMEwtRHRVh4",
+      authDomain: "tat-iot-project.firebaseapp.com",
+      databaseURL: "https://tat-iot-project.firebaseio.com",
+      projectId: "tat-iot-project",
+      storageBucket: "tat-iot-project.appspot.com",
+      messagingSenderId: "868602080623"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 
 <body>
@@ -26,20 +39,23 @@
     <article class="createAcc" id="createAcc">
       <div class="createAccMain" id="createAccMain">
         <i class="close" id="close">
-          <div class="cl1"></div>
-          <div class="cl2"></div>
+          <div class="cl1 closeBtn"></div>
+          <div class="cl2 closeBtn"></div>
         </i>
         <h2>Create an account</h2>
-        <form>
+        <form id="form1">
           <label for="fName">Enter Your Name</label><br>
-          <input id="fName" type="text" pattern="[A-Za-z]{3}" placeholder="First Name" required />
+          <input id="fName" type="text" pattern="[a-zA-Z]+" placeholder="First Name" required />
           <input id="lName" type="text" placeholder="Last name" /><br>
           <label for="cEmail">Email</label><br>
           <input id="cEmail" type="email" required /><br>
           <label for="cPass">Password</label><br>
-          <input type="password" id="cPass" required />
-          <input type="password" placeholder="Confirm Password" required /><br>
-          <button class="createB1">Create Account</button>
+          <input type="password" id="cPass" title="6 charecters or more" pattern="\d|\w{6,}" required />
+          <input type="password" id="ccPass" placeholder="Confirm Password" required /><br>
+          <label for="pCode">Product Code</label><br>
+          <input id="pCode" class="pCode" pattern="[iotpass]{7}"><br>
+          <span class="signup_error"></span><br>
+          <button class="createB1" type="submit">Create Account</button>
         </form>
       </div>
     </article>
@@ -73,16 +89,22 @@
           <h2>Sign in</h2>
           <hr class="hr2">
           <div class="containerEmail">
+            <label for="pass" hidden>Password</label>
             <input id="pass" placeholder="Password" type="password">
-            <button id="s2">Sign in</button>
-          </div>
+            <button id="s2">Sign in</button><br>
+          </div><br>
+          <span id="signinError" class="signinError"></span>
         </div>
 
       </div>
     </article>
   </section>
+
   <script src="scripts/indexScript.js"></script>
+
   <script src="scripts/signUp.js"> </script>
+
+
 </body>
 
 </html>

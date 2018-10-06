@@ -8,6 +8,7 @@
     display: block;
     overflow: hidden;
     transition: all 0.6s;
+    background-color: rgba(0, 0, 0, 0.8);
   }
   .createAccMain {
     background-color: #6200ea;
@@ -15,6 +16,48 @@
     height: 0;
     z-index: 3;
     transition: all 0.6s;
+    align-content: center;
+    margin: 10% 20% 10% 20%;
+    border-radius: 10px;
+  }
+  .createAccMain form {
+    margin-left: 30%;
+  }
+  .createAccMain h2 {
+    margin-left: 40%;
+  }
+  .closeBtn {
+    border: 3px solid white;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 57%;
+    cursor: pointer;
+  }
+  .cl1 {
+    transform: rotate(45deg);
+  }
+  .cl2 {
+    transform: rotate(-45deg);
+  }
+  .createB1 {
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 12px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 0.4s;
+  }
+  .createB1:hover {
+    background-color: #6200ea;
+    color: white;
+    border: 3px solid white;
+  }
+  .signup_error {
+    color: red;
   }
 }
 

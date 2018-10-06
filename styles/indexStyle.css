@@ -143,6 +143,9 @@
   .s1 div {
     vertical-align: center;
   }
+  .signinError {
+    color: red;
+  }
 }
 /* for mobile app */
 @media screen and (max-width: 700px) {
