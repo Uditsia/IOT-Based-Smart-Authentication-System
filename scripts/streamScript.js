@@ -7,4 +7,12 @@ function init() {
   //     time.innerHTML =
   //       "Date:" + Date().slice(0, 16) + "Time:" + Date().slice(15, 25);
   //   }, 300);
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log("Loged in as:" + user);
+    } else {
+      window.location = "../index.html";
+    }
+  });
 }
