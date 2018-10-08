@@ -6,6 +6,12 @@ function init() {
 
   img.onload = () => {
     loadingContainer.style = "display:none;";
+    document.querySelector(".liveTxt").textContent = "LIVE";
     console.log("streaming");
   };
+  setTimeout(() => {
+    if (document.querySelector(".liveTxt").textContent !== "LIVE") {
+      location.reload();
+    }
+  }, 10000);
 }
