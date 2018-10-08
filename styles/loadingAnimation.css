@@ -16,7 +16,7 @@
   position: fixed;
   display: inline-block;
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
 }
 .loadingIcnText {
   font-size: 15px;
@@ -30,7 +30,7 @@
   background-color: black;
   margin: 10px 10px 0 -100px;
   display: inline-block;
-  border: 1.3px solid white;
+  border: 1.3px solid #6200ea;
   border-radius: 50%;
   box-shadow: -15px 8px 15px rgba(0, 0, 0, 0.6);
   position: relative;

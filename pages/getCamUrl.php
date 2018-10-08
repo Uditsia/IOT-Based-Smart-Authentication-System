@@ -59,17 +59,46 @@
                     </i>
                 </div>
 
-                <img id="lStream" src="https://b6df11f6.ngrok.io/video_feed" width="620px" height="462px">
+                <img id="lStream" width="620px" height="462px">
                 <!-- <img id="lStream" src="http://www.visitgreece.gr/deployedFiles/StaticFiles/Photos/Generic%20Contents/Forests/mountains_2_560.jpg"
                     width="620px" height="462px"> -->
                 <!-- <div class="timeView" id="timeView"> <label>Date: Time:</label></div> -->
-                <div class="streamControl" id="streamControl">
-                    
-                </div>
+                <div class="streamControl" id="streamControl"></div>
             </div>
         </article>
     </section>
+    <?php
+$servername = "localhost";
+$username = "id7403524_cam_db_ur";
+$password = "iot12345";
+$dbname = "id7403524_cam_db";
 
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT ip FROM `camera_ip` WHERE `no`=1 ";
+
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h3 id='cam_ip' hidden>".$row["ip"]."</h3>";
+    }
+} else {
+    echo "";
+}
+
+$conn->close();
+
+
+?>
     <script src="../scripts/streamScript.js"></script>
 </body>
 
