@@ -1,0 +1,85 @@
+.container p {
+  position: fixed;
+  padding: 10px;
+  padding-left: 17%;
+  padding-right: 19%;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.loading {
+  width: 620px;
+  height: 47px;
+  /*   background-color:rgba(255,255,255); */
+  margin-top: 10%;
+  position: fixed;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 2;
+}
+.loadingIcnText {
+  font-size: 15px;
+  position: relative;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.loadRound {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  margin: 10px 10px 0 -100px;
+  display: inline-block;
+  border: 1.3px solid white;
+  border-radius: 50%;
+  box-shadow: -15px 8px 15px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+.lr-3 {
+  animation-name: loadingActive3;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes loadingActive3 {
+  0% {
+    margin-left: -120%;
+  }
+  50% {
+    margin-left: 20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+.lr-2 {
+  animation-name: loadingActive2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes loadingActive2 {
+  0% {
+    margin-left: -120%;
+  }
+  50% {
+    margin-left: 25%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+.lr-1 {
+  animation-name: loadingActive1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes loadingActive1 {
+  0% {
+    margin-left: -120%;
+  }
+  55% {
+    margin-left: 20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}

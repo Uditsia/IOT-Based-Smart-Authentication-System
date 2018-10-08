@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#62000ea">
+    <link rel="icon" sizes="192x192" href="../resorces/Imgs/index-page/profilePic.png">
     <title>Live Stream</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../styles/streamStyle.css" />
+    <link rel="stylesheet" href="../styles/loadingAnimation.css">
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -19,19 +22,44 @@
             messagingSenderId: "868602080623"
         };
         firebase.initializeApp(config);
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log("Loged in as:" + user);
+            } else {
+                window.location = "../index.html";
+            }
+        });
     </script>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="profile navEle"></div>
+            <div class="signOut navEle"></div>
+            <div class="status navEle"></div>
+            <div></div>
+        </nav>
+    </header>
     <section>
         <article>
             <div class="liveBox">
                 <div class="liveSym">
                     <div class="redDot"></div><label>LIVE</label>
                 </div>
+                <div class="container">
+                    <p>Buffering...</p>
+                    <i class="loading" title="loading" alt="Loading...">
+                        <div class="loadRound lr-1"></div>
+                        <div class="loadRound lr-2"></div>
+                        <div class="loadRound lr-3"></div>
+                    </i>
+                </div>
 
-                <img id="lStream" src="https://aliquot.serveo.net/video_feed" width="700px" height="460px">
-
+                <img id="lStream" src="https://rependo.serveo.net/video_feed" width="620px" height="462px">
+                <!-- <img id="lStream" src="http://www.visitgreece.gr/deployedFiles/StaticFiles/Photos/Generic%20Contents/Forests/mountains_2_560.jpg"
+                    width="620px" height="462px"> -->
                 <!-- <div class="timeView" id="timeView"> <label>Date: Time:</label></div> -->
                 <div class="streamControl" id="streamControl"></div>
             </div>
