@@ -65,6 +65,15 @@
                 <!-- <div class="timeView" id="timeView"> <label>Date: Time:</label></div> -->
                 <div class="streamControl" id="streamControl"></div>
             </div>
+            <div class="camStats">
+                <div class="camStatsBtn">
+                    <span class="hiddenBtn HB1">on</span>
+                    <button class="camB1">on</button>
+                    <span class="hiddenBtn HB2">off</span>
+                </div>
+                <span class="camArmed">Armed</span><br>
+                <span class="camStatsTxt">Cam Status:<span>Connected</span></span>
+            </div>
         </article>
     </section>
     <?php
@@ -99,6 +108,7 @@ $conn->close();
 
 
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../scripts/streamScript.js"></script>
 </body>
 
