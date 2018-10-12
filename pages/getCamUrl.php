@@ -68,11 +68,11 @@
             <div class="camStats">
                 <div class="camStatsBtn">
                     <span class="hiddenBtn HB1">on</span>
-                    <button class="camB1">on</button>
+                    <button class="camB1">off</button>
                     <span class="hiddenBtn HB2">off</span>
                 </div>
-                <span class="camArmed">Armed</span><br>
-                <span class="camStatsTxt">Cam Status:<span>Connected</span></span>
+                <span class="camArmed">Disarmed</span><br>
+                <span class="camStatsTxt">Cam Status:<span class="connectionStats">Disconnected!!</span></span>
             </div>
         </article>
     </section>
