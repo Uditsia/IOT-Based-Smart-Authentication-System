@@ -7,7 +7,7 @@ function init() {
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      window.location = "https://tatiotproject.000webhostapp.com/pages/getCamUrl.php";
+      window.location = "../pages/getCamUrl.php";
     } else {
       console.log("not logged in");
     }
@@ -84,7 +84,7 @@ function init() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log("Signed in:", user);
-        window.location = "https://tatiotproject.000webhostapp.com/pages/getCamUrl.php";
+        window.location = "../pages/getCamUrl.php";
       } else {
         console.log("not signed in");
       }
