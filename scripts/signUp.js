@@ -55,7 +55,7 @@ function sInit() {
       });
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        window.location = "pages/liveStream.html";
+        window.location = "https://tatiotproject.000webhostapp.com/pages/getCamUrl.php";
       } else {
         console.log("not logged in");
       }

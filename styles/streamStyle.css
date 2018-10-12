@@ -149,10 +149,10 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    color: rgb(26, 211, 26);
+    color: red;
     background-color: white;
     box-shadow: 0 0 5px #370083;
-    margin: 0;
+    margin-left: 60%;
     transition: all 0.6s;
     border: none;
   }
@@ -163,8 +163,8 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
     font-weight: bolder;
-    color: rgba(30, 255, 0, 0.274);
-    text-shadow: 0 0 20px rgb(148, 236, 148);
+    color: red;
+    text-shadow: 0 0 20px red;
     display: inline-block;
     margin-left: 6%;
     align-self: auto;
@@ -173,9 +173,9 @@
     margin-left: 25%;
   }
   .camStatsTxt span {
-    color: rgb(26, 211, 26);
+    color: red;
   }
-  body > div {
+  body > div > a > img {
     display: none !important;
   }
 }

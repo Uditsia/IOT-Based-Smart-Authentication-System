@@ -161,4 +161,11 @@
   .authSub2 h2 {
     display: none;
   }
+  body > div > a > img{
+      display: none !important;
+  }
 }
+
+ body > div > a > img{
+      display: none !important;
+  }
