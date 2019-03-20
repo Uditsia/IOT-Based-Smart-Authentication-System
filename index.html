@@ -1,112 +1,135 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#62000ea" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="resorces/Imgs/index-page/profilePic.png"
+    />
+    <title>Smart Cam</title>
+    <link rel="styleSheet" href="styles/indexStyle.css" />
+    <link rel="stylesheet" href="styles/signUp.css" />
+    <link rel="preload" href="./styles/loadingAnimation.css" as="style" />
+    <link rel="preload" href="./styles/streamStyle.css" as="style" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web app for IOT based smart Authenticantion system, Trident academy of Technology,
+    project"
+    />
+    <meta
+      name="keywords"
+      content="IoT, Inreusion detection system, camera, survelance,Authentication system"
+    />
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBLDNV-x3UyRbtbEj1iXk7-kMEwtRHRVh4",
+        authDomain: "tat-iot-project.firebaseapp.com",
+        databaseURL: "https://tat-iot-project.firebaseio.com",
+        projectId: "tat-iot-project",
+        storageBucket: "tat-iot-project.appspot.com",
+        messagingSenderId: "868602080623"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#62000ea">
-  <link rel="icon" sizes="192x192" href="resorces/Imgs/index-page/profilePic.png">
-  <title>Smart Cam</title>
-  <link rel="styleSheet" href="styles/indexStyle.css">
-  <link rel="stylesheet" href="styles/signUp.css">
-  <link rel="preload" href="./styles/loadingAnimation.css" as="style">
-  <link rel="preload" href="./styles/streamStyle.css" as="style">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web app for IOT based smart Authenticantion system, Trident academy of Technology,
-    project" />
-  <meta name="keywords" content="IoT, Inreusion detection system, camera, survelance,Authentication system" />
-  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBLDNV-x3UyRbtbEj1iXk7-kMEwtRHRVh4",
-      authDomain: "tat-iot-project.firebaseapp.com",
-      databaseURL: "https://tat-iot-project.firebaseio.com",
-      projectId: "tat-iot-project",
-      storageBucket: "tat-iot-project.appspot.com",
-      messagingSenderId: "868602080623"
-    };
-    firebase.initializeApp(config);
-  </script>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <p> IoT Based Smart Authentication System</p>
-    </nav>
-
-  </header>
-  <section>
-
-    <article class="createAcc" id="createAcc">
-      <div class="createAccMain" id="createAccMain">
-        <i class="close" id="close">
-          <div class="cl1 closeBtn"></div>
-          <div class="cl2 closeBtn"></div>
-        </i>
-        <h2>Create an account</h2>
-        <form id="form1">
-          <label for="fName">Enter Your Name</label><br>
-          <input id="fName" type="text" pattern="[a-zA-Z]+" placeholder="First Name" required />
-          <input id="lName" type="text" placeholder="Last name" /><br>
-          <label for="cEmail">Email</label><br>
-          <input id="cEmail" type="email" required /><br>
-          <label for="cPass">Password</label><br>
-          <input type="password" id="cPass" title="6 charecters or more" pattern="\d|\w{6,}" required />
-          <input type="password" id="ccPass" placeholder="Confirm Password" required /><br>
-          <label for="pCode">Product Code</label><br>
-          <input id="pCode" class="pCode" pattern="[iotpass]{7}"><br>
-          <span class="signup_error"></span><br>
-          <button class="createB1" type="submit">Create Account</button>
-        </form>
-      </div>
-    </article>
-
-    <article>
-      <div id="authMain" class="authMain">
-
-        <div id="authSub1" class="authSub1 signInBox">
-          <h2>Sign in</h2>
-          <hr class="hr1">
-          <div class="containerEmail">
-            <label for="email" hidden>Email</label>
-            <input id="email" type="email" placeholder="Email" required autofocus>
-            <button id="s1" class="s1">
-              <div>Next</div>
-            </button>
-
-          </div><br>
-
-
-          <a href="#" class="fEmail a1">Forgot Email?</a>
-
-          <a id="create" class="create a1" href="#">Create account</a>
-
+  <body>
+    <header>
+      <nav>
+        <p>IoT Based Smart Authentication System</p>
+      </nav>
+    </header>
+    <section>
+      <article class="createAcc" id="createAcc">
+        <div class="createAccMain" id="createAccMain">
+          <i class="close" id="close">
+            <div class="cl1 closeBtn"></div>
+            <div class="cl2 closeBtn"></div>
+          </i>
+          <h2>Create an account</h2>
+          <form id="form1">
+            <label for="fName">Enter Your Name</label><br />
+            <input
+              id="fName"
+              type="text"
+              pattern="[a-zA-Z]+"
+              placeholder="First Name"
+              required
+            />
+            <input id="lName" type="text" placeholder="Last name" /><br />
+            <label for="cEmail">Email</label><br />
+            <input id="cEmail" type="email" required /><br />
+            <label for="cPass">Password</label><br />
+            <input
+              type="password"
+              id="cPass"
+              title="6 charecters or more"
+              pattern="\d|\w{6,}"
+              required
+            />
+            <input
+              type="password"
+              id="ccPass"
+              placeholder="Confirm Password"
+              required
+            /><br />
+            <label for="pCode">Product Code</label><br />
+            <input id="pCode" class="pCode" pattern="[iotpass]{7}" /><br />
+            <span class="signup_error"></span><br />
+            <button class="createB1" type="submit">Create Account</button>
+          </form>
         </div>
+      </article>
 
-        <div id="authSub2" class="authSub2 signInBox">
-          <button id="back" class="back">&#8678;Back</button>
-          <div id="pImg" class="pImg"><img width="170px" height="170px" src="resorces/Imgs/index-page/profilePic.png"
-              alt="Profile Picture"></div>
-          <h2>Sign in</h2>
-          <hr class="hr2">
-          <div class="containerEmail">
-            <label for="pass" hidden>Password</label>
-            <input id="pass" placeholder="Password" type="password">
-            <button id="s2">Sign in</button><br>
-          </div><br>
-          <span id="signinError" class="signinError"></span>
+      <article>
+        <div id="authMain" class="authMain">
+          <div id="authSub1" class="authSub1 signInBox">
+            <h2>Sign in</h2>
+            <hr class="hr1" />
+            <div class="containerEmail">
+              <label for="email" hidden>Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email"
+                required
+                autofocus
+              />
+              <button id="s1" class="s1">
+                <div>Next</div>
+              </button>
+            </div>
+            <br />
+
+            <a href="#" class="fEmail a1">Forgot Email?</a>
+
+            <a id="create" class="create a1" href="#">Create account</a>
+          </div>
+
+          <div id="authSub2" class="authSub2 signInBox">
+            <button id="back" class="back">&#8678;Back</button>
+
+            <h2>Password</h2>
+            <hr class="hr2" />
+            <div class="containerEmail">
+              <label for="pass" hidden>Password</label>
+              <input id="pass" placeholder="Password" type="password" />
+              <button id="s2">Sign in</button><br />
+            </div>
+            <br />
+            <span id="signinError" class="signinError"></span>
+          </div>
         </div>
+      </article>
+    </section>
 
-      </div>
-    </article>
-  </section>
+    <script src="scripts/indexScript.js"></script>
 
-  <script src="scripts/indexScript.js"></script>
-
-  <script src="scripts/signUp.js"> </script>
-
-
-</body>
-
+    <script src="scripts/signUp.js"></script>
+  </body>
 </html>

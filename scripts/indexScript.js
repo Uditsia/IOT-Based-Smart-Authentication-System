@@ -7,7 +7,7 @@ function init() {
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      window.location = "../pages/getCamUrl.php";
+      window.location = "pages/stream.php";
     } else {
       console.log("not logged in");
     }
@@ -56,6 +56,13 @@ function init() {
   });
   let s2 = document.querySelector("#s2");
   s2.addEventListener("click", auth);
+  let pass = document.querySelector("#pass");
+  pass.addEventListener("keypress", evt => {
+    const key = evt.keyCode;
+    if (key === 13) {
+      auth();
+    }
+  });
   document.querySelector("#back").addEventListener("click", function() {
     authSub1.style = "left:30%;opacity:1;";
     authSub2.style = "left:948px;opacity:0;";
@@ -83,11 +90,17 @@ function init() {
       });
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
+        authSub2.style = "opacity:0.5;";
         console.log("Signed in:", user);
-        window.location = "../pages/getCamUrl.php";
+        window.location = "pages/stream.php";
       } else {
         console.log("not signed in");
       }
     });
   }
+  document.querySelector(".fEmail").addEventListener("click", () => {
+    alert("Contact +919090914606 to get a reset link");
+  });
+  var stateObj = { foo: "bar" };
+  history.replaceState(stateObj, "page 3", "bar2.html");
 }

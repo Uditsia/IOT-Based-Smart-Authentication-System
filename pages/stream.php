@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../styles/streamStyle.css" />
     <link rel="stylesheet" href="../styles/loadingAnimation.css">
     <link rel="stylesheet" href="../styles/navStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -38,13 +39,16 @@
     <header>
         <nav>
             <div class="profile navEle"></div>
-            <div class="signOut navEle"></div>
-            <div class="status navEle"></div>
+            <div class="signOut navEle">Sign out</div>
+            <div class="status navEle">Activity log</div>
             <div></div>
         </nav>
     </header>
 
     <section>
+        <article class="overlay">
+            <iframe src="../pages/lf/NewFile1.php" ></iframe>
+        </article>
         <article>
             <div class="liveBox">
                 <div class="liveSym">
@@ -59,16 +63,65 @@
                     </i>
                 </div>
 
-                <img id="lStream" src="https://b6df11f6.ngrok.io/video_feed" width="620px" height="462px">
-                <!-- <img id="lStream" src="http://www.visitgreece.gr/deployedFiles/StaticFiles/Photos/Generic%20Contents/Forests/mountains_2_560.jpg"
-                    width="620px" height="462px"> -->
-                <!-- <div class="timeView" id="timeView"> <label>Date: Time:</label></div> -->
+                <img id="lStream" width="620px" height="462px">
                 <div class="streamControl" id="streamControl"></div>
             </div>
+
+            <!-- Cam controls -->
+           <!-- <div class="camStats" hidden>
+                <div class="camStatsBtn">
+                    <span class="hiddenBtn HB1">on</span>
+                    <button class="camB1">off</button>
+                    <span class="hiddenBtn HB2">off</span>
+                </div>
+                <span class="camArmed">Disarmed</span><br>
+                <span class="camStatsTxt">Cam Status:<span class="connectionStats">Disconnected!!</span></span>
+            </div> -->
+            
+        
         </article>
+        <div class="mainDiv">
+            <div class="subDiv lf"><i class="far fa-2x fa-lightbulb icon"> Light</i> <i class="fas fa-2x fa-wind icon"> Fan</i><i class="fas fa-2x fa-thermometer-three-quarters icon"> Climate</i></div>
+            <div class="subDiv gas"><i class="fas fa-burn fa-2x icon"> Gas</i></div>
+        </div>
     </section>
 
+
+    <?php
+$servername = "localhost";
+$username = "iotuser";
+$password = "iotpass54321";
+$dbname = "iotdb";
+
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT ip FROM `camera_ip` WHERE `no`=1 ";
+
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h3 id='cam_ip' hidden>".$row["ip"]."</h3>";
+    }
+} else {
+    echo "";
+}
+
+$conn->close();
+
+
+?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../scripts/streamScript.js"></script>
+    <script src="../scripts/integration.js"></script>
 </body>
 
 </html>

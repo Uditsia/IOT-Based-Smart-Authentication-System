@@ -1,13 +1,15 @@
- <?php
+<?php
 $servername = "localhost";
 $username = "iotuser";
 $password = "iotpass54321";
 $dbname = "iotdb";
 
-$ip = $_REQUEST['ip'];
+$slno = $_REQUEST['slno'];
+$name = $_REQUEST['name'];
+$status = $_REQUEST['status'];
 
 $pin = $_REQUEST['pin'];
-if($pin== "cam321")
+if($pin== "act321")
 {
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,10 +18,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE `camera_ip` SET `ip`='$ip' WHERE `no`=1 ";
+$sql = "UPDATE `activity` SET `person_name`='$name' , `status`='$status' WHERE `sl_no`='$slno' ";
 
 if ($conn->query($sql) === TRUE) {
-    echo "ip updated";
+    echo "activity updated";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

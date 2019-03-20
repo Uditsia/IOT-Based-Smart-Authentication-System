@@ -31,7 +31,7 @@
     width: 20px;
     display: inline-block;
     position: absolute;
-    margin-top: 1%;
+    margin-top: 14px;
     margin-left: 57%;
     cursor: pointer;
   }
@@ -42,13 +42,13 @@
     transform: rotate(-45deg);
   }
   .createB1 {
-    border: none;
     padding: 5px;
     font-size: 15px;
-    margin-top: 12px;
+    margin-top: 8px;
     background-color: white;
+    color: #6200ea;
     cursor: pointer;
-    border: 1px solid white;
+    border: 3px solid white;
     transition: all 0.4s;
   }
   .createB1:hover {
@@ -58,6 +58,14 @@
   }
   .signup_error {
     color: red;
+  }
+  #form1 input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  #form1 label {
+    font-size: 18px;
   }
 }
 

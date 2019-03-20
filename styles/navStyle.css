@@ -1,9 +1,36 @@
-nav {
-  float: left;
-  width: 10vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  background-color: #6200ea;
-  box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.2);
+@media screen and (min-width: 700px) {
+  nav {
+    float: left;
+    width: 10vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: #6200ea;
+    box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .navEle {
+    font-family: "helvetica";
+    width: 89.5%;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.6s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  .signOut {
+    background-color: red;
+  }
+  .status {
+    background-color: "goshtWhite";
+  }
+  .signOut:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 699px) {
+  nav {
+    display: none;
+  }
 }
